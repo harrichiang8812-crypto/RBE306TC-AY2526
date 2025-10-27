@@ -1,0 +1,6 @@
+--2025-10-15 15:08:31--  https://cas-bridge.xethub.hf.co/xet-bridge-us/66d19580e2632490a6bc5829/e78561eaef24b90ef0f65bcde2c3381a006a8a2ebab6aeda8a97b315f45a0a87?X-Amz-Algorithm=AWS4-HMAC-SHA256
+Resolving cas-bridge.xethub.hf.co (cas-bridge.xethub.hf.co)... 3.166.244.25, 3.166.244.104, 3.166.244.65, ...
+Connecting to cas-bridge.xethub.hf.co (cas-bridge.xethub.hf.co)|3.166.244.25|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2025-10-15 15:08:31 ERROR 403: Forbidden.
+

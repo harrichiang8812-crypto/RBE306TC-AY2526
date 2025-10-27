@@ -19,16 +19,15 @@ elif (torch.has_mps or torch.backends.mps.is_available()) and ALLOW_MPS:
 print(f"Using device: {DEVICE}")
 
 tokenizer = CLIPTokenizer("./data/vocab.json", merges_file="./data/merges.txt")
-model_file = "./models"
+model_file = "/data-shared/NAS/RBE306TC/Tools/StableDiffusionModels/"
 
 
 models = model_loader.preload_models_from_standard_weights(model_file, DEVICE)
 
 ## TEXT TO IMAGE
 
-prompt = "A cat stretching on the floor, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
+prompt = "A donkey stretching on the floor, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
 # prompt = "replace the dog with a cat, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
-# prompt = "generate a J-10 fighterjet"
 
 
 uncond_prompt = ""  # Also known as negative prompt

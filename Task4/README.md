@@ -3,7 +3,7 @@
 ## Introduction
 
 This repository is incorporated from the origin: https://github.com/jeonsworld/ViT-pytorch
-Please be advised to only use this repository for your RBE406TC Task 4 as ACADEMIC AND RESEARCH PURPOSE ONLY.
+Please be advised to only use this repository for your RBE306TC Task 4 as ACADEMIC AND RESEARCH PURPOSE ONLY.
 This repository is NOT ALLOWED for any commercial applications.
 
 ![ViT.png](https://s2.loli.net/2022/01/19/w3CyXNrhEeI7xOF.png)

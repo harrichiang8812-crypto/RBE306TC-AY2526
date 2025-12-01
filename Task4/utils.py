@@ -57,7 +57,7 @@ def create_model(args):
 
 def model_parallel(args, model):
     device_ids = [i for i in range(len(args.gpu.split(',')))]
-    model = nn.DataParallel(model, device_ids=device_ids)
+    # model = nn.DataParallel(model, device_ids=device_ids)
 
     return model
 

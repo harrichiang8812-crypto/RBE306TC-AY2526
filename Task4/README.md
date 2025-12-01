@@ -14,24 +14,23 @@ If this works for you, please give me a star, this is very important to me.😊
 
 ## Quick start
 
-1. Clone this repository
 
-```shell
-git clone https://github.com/Runist/torch_Vision_Transformer
-```
-2. Install torch_Vision_Transformer from source.
+1. Install respective anaconda envnironment.
 
 ```shell
 cd torch_Vision_Transformer
 pip install -r requirements.txt
 ```
-3. Download the **flower dataset**.
+2. Install Pytorch from pytorch.org with respective command displayed.
+
+3. [Optional] Download the **flower dataset**.
 ```shell
 wget https://github.com/Runist/image-classifier-keras/releases/download/v0.2/dataset.zip
 unzip dataset.zip
 ```
-4. Modifying the [config.py](https://github.com/Runist/torch_Vision_Transformer/blob/master/config.py).
-5. Download pretrain weights, the url in [utils.py](https://github.com/Runist/torch_Vision_Transformer/blob/master/utils.py).
+4. Modifying the [config.py](https://github.com/harrichiang8812-crypto/RBE306TC-AY2526/blob/main/Task4/config.py).
+
+5. Find pretrain weights via [/data-shared/NAS/RBE306TC/Tools/PretrainViTs/].
 6. Start train your model.
 
 ```shell

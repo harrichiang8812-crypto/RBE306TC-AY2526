@@ -3,7 +3,7 @@
 # @Author: Runist
 # @Time : 2021/12/13 18:36
 # @Software: PyCharm
-# @Brief: 训练脚本
+# @Brief: script for fine-tuning a vision transformer
 
 
 import os
@@ -48,7 +48,7 @@ def main(args):
         assert os.path.exists(args.weights), "weights file: '{}' not exist.".format(args.weights)
         print("Loading...")
         weights_dict = torch.load(args.weights, map_location=device)
-        # 删除不需要的权重
+        # delele unnecessary weights 
         del_keys = ['head.weight', 'head.bias'] if model.has_logits \
             else ['pre_logits.fc.weight', 'pre_logits.fc.bias', 'head.weight', 'head.bias']
         for k in del_keys:
@@ -57,13 +57,13 @@ def main(args):
 
     if args.freeze_layers:
         for name, params in model.named_parameters():
-            # 除head, pre_logits外，其他权重全部冻结
+            # freeze everything except head and pre_logits
             if "head" not in name and "pre_logits" not in name:
                 params.requires_grad_(False)
             else:
                 print("training {}".format(name))
 
-    model = model_parallel(args, model)
+    # model = model_parallel(args, model)
     model.to(device)
 
     # define loss function

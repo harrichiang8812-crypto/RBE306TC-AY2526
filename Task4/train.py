@@ -48,20 +48,17 @@ def main(args):
         assert os.path.exists(args.weights), "weights file: '{}' not exist.".format(args.weights)
         print("Loading...")
         weights_dict = torch.load(args.weights, map_location=device)
+        
         # delele unnecessary weights 
         del_keys = ['head.weight', 'head.bias'] if model.has_logits \
             else ['pre_logits.fc.weight', 'pre_logits.fc.bias', 'head.weight', 'head.bias']
         for k in del_keys:
             del weights_dict[k]
+
         print(model.load_state_dict(weights_dict, strict=False))
 
     if args.freeze_layers:
-        for name, params in model.named_parameters():
-            # freeze everything except head and pre_logits
-            if "head" not in name and "pre_logits" not in name:
-                params.requires_grad_(False)
-            else:
-                print("training {}".format(name))
+        print("Please place your selections for trainable parameter / freezing parameters here")
 
     # model = model_parallel(args, model)
     model.to(device)
@@ -71,10 +68,14 @@ def main(args):
 
     # construct an optimizer
     params = [p for p in model.parameters() if p.requires_grad]
-    optimizer = optim.SGD(params, lr=args.lr, momentum=0.9, weight_decay=5e-5)
+    optimizer = optim.SGD(params, lr=args.lr, momentum=0.9, weight_decay=5e-5) # this is for re-trained parameters
+    # optimizer2: for trained parameters with minimal learning rate: you can place here 
+
+
     # Scheduler https://arxiv.org/pdf/1812.01187.pdf
     lf = lambda x: ((1 + math.cos(x * math.pi / args.epochs)) / 2) * (1 - args.lrf) + args.lrf  # cosine
     scheduler = lr_scheduler.LambdaLR(optimizer, lr_lambda=lf)
+    # the same for optimizer: you can place a scheduler2 here 
 
     best_acc = 0.0
 
@@ -91,7 +92,7 @@ def main(args):
             labels = labels.to(device)
 
             # Zero the gradient
-            optimizer.zero_grad()
+            optimizer.zero_grad() # the same for optimizer
 
             # Get model predictions, calculate loss
             logits = model(images)
@@ -99,8 +100,8 @@ def main(args):
 
             loss = loss_function(logits, labels)
             loss.backward()
-            optimizer.step()
-            scheduler.step()
+            optimizer.step()    # the same for optimizer2
+            scheduler.step()    # the same for scheduler2
 
             # print statistics
             train_loss.append(loss.item())

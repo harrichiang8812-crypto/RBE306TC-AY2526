@@ -28,6 +28,8 @@ pip install -r requirements.txt
 wget https://github.com/Runist/image-classifier-keras/releases/download/v0.2/dataset.zip
 unzip dataset.zip
 ```
+PS: this dataset has been placed to [/data-shared/NAS/RBE306TC/AY2526/Flowers]
+
 4. Modifying the [config.py](https://github.com/harrichiang8812-crypto/RBE306TC-AY2526/blob/main/Task4/config.py).
 
 5. Find pretrain weights via [/data-shared/NAS/RBE306TC/Tools/PretrainViTs/].

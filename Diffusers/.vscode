@@ -1,0 +1,31 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Image Generator with Args",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}", // 运行当前打开的 Python 文件
+            "console": "integratedTerminal", // 在 VS Code 的集成终端中运行
+            "justMyCode": true,
+            
+            // --- 命令行参数配置 ---
+            "args": [
+                // 1. Prompt 参数 (REQUIRED)
+                "--prompt",
+                // 替换为你希望使用的中文或英文 Prompt
+                "A Chinese couple is sitting casually on a living room rug, surrounded by six cats of different coat patterns. The image must clearly depict the full bodies of the couple and all six cats, ensuring none are cropped. All six cats must be sitting upright on the ground and looking directly forward. The cats include: an orange and white cat, an odd-eyed white cat, a black cat, a calico cat, an American Shorthair Scottish Fold, and a tuxedo cat. The scene should convey a warm and peaceful domestic atmosphere.",
+                
+
+                "--width","1920"
+                // 2. Width 参数 (OPTIONAL, Default: 1920)
+                // 仅当你想要更改默认宽度时取消注释并设置值
+                // "--width",
+                // "1280" 
+            ]
+        }
+    ]
+}

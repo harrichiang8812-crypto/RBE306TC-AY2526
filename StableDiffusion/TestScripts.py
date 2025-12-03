@@ -11,6 +11,7 @@ DEVICE = "cpu"
 
 ALLOW_CUDA = True
 ALLOW_MPS = False
+GENERATE_DIR = '../../SD-Generate'
 
 if torch.cuda.is_available() and ALLOW_CUDA:
     DEVICE = "cuda"
@@ -26,8 +27,9 @@ models = model_loader.preload_models_from_standard_weights(model_file, DEVICE)
 
 ## TEXT TO IMAGE
 
-prompt = "A donkey stretching on the floor, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
-# prompt = "replace the dog with a cat, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
+# prompt = "A honda civic is crashing with a toyota rav4, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
+# prompt = "A Chinese couple is sitting casually on a living room rug, surrounded by six cats of different coat patterns. The image must clearly depict the full bodies of the couple and all six cats, ensuring none are cropped. All six cats must be sitting upright on the ground and looking directly forward. The cats include: an orange and white cat, an odd-eyed white cat, a black cat, a calico cat, an American Shorthair Scottish Fold, and a tuxedo cat. The scene should convey a warm and peaceful domestic atmosphere."
+prompt = "A Chinese couple is sitting casually on a living room rug, surrounded by six cats of different coat patterns. Highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
 
 
 uncond_prompt = ""  # Also known as negative prompt
@@ -38,8 +40,8 @@ cfg_scale = 8  # min: 1, max: 14
 
 input_image = None
 # Comment to disable image to image
-image_path = "./images/dog.jpg"
-input_image = Image.open(image_path)
+# image_path = "./images/dog.jpg"
+# input_image = Image.open(image_path)
 # Higher values means more noise will be added to the input image, so the result will further from the input image.
 # Lower values means less noise is added to the input image, so output will be closer to the input image.
 strength = 0.999
@@ -67,7 +69,8 @@ output_image = pipeline.generate(
 
 # Combine the input image and the output image into a single image.
 # Image.fromarray(output_image)
-fname = f"output_{datetime.now():%Y%m%d_%H%M%S}.png"
-fname = os.path.join('./generation', fname)
+fname = f"{datetime.now():%Y%m%d-%H%M%S}.png"
+fname = os.path.join(GENERATE_DIR, fname)
+os.makedirs(GENERATE_DIR, exist_ok=True)
 Image.fromarray(output_image).save(fname)
 print("Saved:", fname)

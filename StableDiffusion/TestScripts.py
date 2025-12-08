@@ -27,9 +27,7 @@ models = model_loader.preload_models_from_standard_weights(model_file, DEVICE)
 
 ## TEXT TO IMAGE
 
-# prompt = "A honda civic is crashing with a toyota rav4, highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
-# prompt = "A Chinese couple is sitting casually on a living room rug, surrounded by six cats of different coat patterns. The image must clearly depict the full bodies of the couple and all six cats, ensuring none are cropped. All six cats must be sitting upright on the ground and looking directly forward. The cats include: an orange and white cat, an odd-eyed white cat, a black cat, a calico cat, an American Shorthair Scottish Fold, and a tuxedo cat. The scene should convey a warm and peaceful domestic atmosphere."
-prompt = "A Chinese couple is sitting casually on a living room rug, surrounded by six cats of different coat patterns. Highly detailed, ultra sharp, cinematic, 100mm lens, 8k resolution."
+prompt = "a fish swimming in the water, fighting against a submarine, 4k resolution."
 
 
 uncond_prompt = ""  # Also known as negative prompt
@@ -48,7 +46,7 @@ strength = 0.999
 
 ## SAMPLER
 sampler = "ddpm"
-num_inference_steps = 500
+num_inference_steps = 100
 seed = 42
 
 output_image = pipeline.generate(

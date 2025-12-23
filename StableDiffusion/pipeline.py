@@ -17,7 +17,7 @@ GIF_FRAMES = 100
 GIF_PLAY = 10000  # <--- 修正了这里的语法错误
 
 
-INTERMEDIATE_DIR = '../../SD-Intermediate'
+INTERMEDIATE_DIR = '/data-shared/NAS/RBE306TC/AY2526/SD-Intermediate'
 
 
 

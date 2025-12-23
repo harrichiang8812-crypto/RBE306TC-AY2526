@@ -1,0 +1,30 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Image Generator with Args",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}", // 运行当前打开的 Python 文件
+            "console": "integratedTerminal", // 在 VS Code 的集成终端中运行
+            "justMyCode": true,
+            
+            // --- 命令行参数配置 ---
+            "args": [
+                // 1. Prompt 参数 (REQUIRED)
+                "--prompt",
+                // 替换为你希望使用的中文或英文 Prompt
+                "A young Asian woman wearing a yellow knitted sweater paired with a white necklace. Her hands rest on her knees, and her expression is serene. The background is a rough brick wall; warm afternoon sunlight spills over her, creating a tranquil and cozy atmosphere. The shot is framed at a medium distance, highlighting her demeanor and the details of her attire. Soft light falls on her face, emphasizing her facial features and the texture of her accessories, adding depth and approachability to the image. The overall composition is clean, with the texture of the brick wall complementing the interplay of light and shadow, accentuating the subject's elegance and composure.",
+                
+
+                // 2. Width 参数 (OPTIONAL, Default: 1920)
+                // 仅当你想要更改默认宽度时取消注释并设置值
+                // "--width",
+                // "1280" 
+            ]
+        }
+    ]
+}

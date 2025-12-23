@@ -31,17 +31,17 @@ hyperParams = {
         # feature extractor parametrers
         'TrueFakeExtractorPath': [],
         'ContentExtractorPath':[
-                # '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/VGG11Net/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/VGG13Net/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/ResNet18/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/ResNet34/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/ResNet50/BestExtractor.pth'
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG11Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG11Net/VGG13Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG11Net/ResNet18/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG11Net/ResNet34/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG11Net/ResNet50/BestExtractor.pth'
                 ],
         'StyleExtractorPath':[
-                # '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300/Style/VGG11Net/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300/Style/VGG13Net/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300/Style/ResNet18/BestExtractor.pth',
-                # '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300/Style/ResNet34/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300-Style/VGG11Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300-Style/VGG13Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300-Style/ResNet18/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/HW300-Style/ResNet34/BestExtractor.pth',
                 ],
 
         # learning hypers
@@ -59,8 +59,8 @@ penalties = {
         'PenaltyDiscriminatorCategory': 0,
         'GeneratorCategoricalPenalty': 0.,
         'PenaltyVaeKl': 1,        
-        # 'PenaltyContentFeatureExtractor': [1,1,1,1,1],
-        # 'PenaltyStyleFeatureExtractor':[1,1,1,1],
+        'PenaltyContentFeatureExtractor': [1,1,1,1,1],
+        'PenaltyStyleFeatureExtractor':[1,1,1,1],
         'PenaltyAdversarial':1,
         'PenaltyDiscriminatorPenalty':10
 }

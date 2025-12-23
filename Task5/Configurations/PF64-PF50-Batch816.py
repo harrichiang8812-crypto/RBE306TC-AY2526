@@ -30,19 +30,19 @@ hyperParams = {
         # feature extractor parametrers
         'TrueFakeExtractorPath': [],
         'ContentExtractorPath':[
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/VGG11Net/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/VGG13Net/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/ResNet18/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/ResNet34/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Content/ResNet50/BestExtractor.pth'
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG11Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/VGG13Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/ResNet18/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/ResNet34/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF64-Contents/ResNet50/BestExtractor.pth'
                 ],
         
         'StyleExtractorPath':  [
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Style/VGG11Net/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Style/VGG13Net/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Style/ResNet18/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Style/ResNet34/BestExtractor.pth',
-                '/data-shared/server09/data1/haochuan/Codes/MuyinWNet/FeatureExtractorTrained/20240928New/Ckpts/Style/ResNet50/BestExtractor.pth'
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF80-Style/VGG11Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF80-Style/VGG13Net/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF80-Style/ResNet18/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF80-Style/ResNet34/BestExtractor.pth',
+                '/data-shared/server09/data1/haochuan/Character/PtTrainedFeatureExtractors/PF80-Style/ResNet50/BestExtractor.pth'
                 ],
         
         # learning hypers
